@@ -112,15 +112,12 @@
         <h1>📎 Useful Links</h1>
         
         <div class="links-container">
-            <!-- ADD YOUR LINKS HERE -->
-            <!-- Copy the link-item div below and change the title and URL -->
-            
             <div class="link-item">
                 <div class="link-info">
                     <div class="link-title">iphone رابط تحويل *6 ل *3</div>
                     <div class="link-url">https://apps.apple.com/us/app/npv-tunnel/id1629465476</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://apps.apple.com/us/app/npv-tunnel/id1629465476')">تحميل</button>
             </div>
 
             <div class="link-item">
@@ -128,7 +125,7 @@
                     <div class="link-title">رابط كورة نجمة 6*</div>
                     <div class="link-url">https://cutt.ly/6tiikNHJ</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://cutt.ly/6tiikNHJ')">تحميل</button>
             </div>
 
             <div class="link-item">
@@ -136,7 +133,7 @@
                     <div class="link-title">ياسين تيفي *6</div>
                     <div class="link-url">https://whatsapp.com/channel/0029Vb71NqOAYlUAzDTXRG3t</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://whatsapp.com/channel/0029Vb71NqOAYlUAzDTXRG3t')">تحميل</button>
             </div>
 
             <div class="link-item">
@@ -144,15 +141,15 @@
                     <div class="link-title">android رابط تحويل *6 ل *3 </div>
                     <div class="link-url">https://play.google.com/store/apps/details?id=xyz.sevennetvpn.org</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://play.google.com/store/apps/details?id=xyz.sevennetvpn.org')">تحميل</button>
             </div>
 
             <div class="link-item">
                 <div class="link-info">
                     <div class="link-title">wifi رابط افلام و كورة</div>
-                    <div class="link-url">https://play.google.com/store/apps/details?id=com.genraltvpro.app&amp;hl=en&amp;pli=1</div>
+                    <div class="link-url">https://play.google.com/store/apps/details?id=com.genraltvpro.app&hl=en&pli=1</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://play.google.com/store/apps/details?id=com.genraltvpro.app&hl=en&pli=1')">تحميل</button>
             </div>
 
             <div class="link-item">
@@ -160,7 +157,7 @@
                     <div class="link-title">wifi رابط كورة ايفون</div>
                     <div class="link-url">https://apps.apple.com/us/app/drama-live/id6449362193</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://apps.apple.com/us/app/drama-live/id6449362193')">تحميل</button>
             </div>
 
             <div class="link-item">
@@ -168,14 +165,15 @@
                     <div class="link-title">wifi رابط كورة أندرويد</div>
                     <div class="link-url">https://cutt.ly/3tiikRey</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://cutt.ly/3tiikRey')">تحميل</button>
             </div>
- <div class="link-item">
+
+            <div class="link-item">
                 <div class="link-info">
                     <div class="link-title">chatgpt +</div>
                     <div class="link-url">https://cutt.ly/htiijpmD</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('', this)">نسخ</button>
+                <button class="copy-btn" onclick="openLink('https://cutt.ly/htiijpmD')">تحميل</button>
             </div>
          
             <!-- To add more links, copy this template:
@@ -185,7 +183,7 @@
                     <div class="link-title">YOUR TITLE HERE</div>
                     <div class="link-url">YOUR URL HERE</div>
                 </div>
-                <button class="copy-btn" onclick="copyLink('YOUR URL HERE', this)">Copy Link</button>
+                <button class="copy-btn" onclick="openLink('YOUR URL HERE')">تحميل</button>
             </div>
             
             -->
@@ -194,17 +192,8 @@
     </div>
 
     <script>
-        function copyLink(url, btn) {
-            navigator.clipboard.writeText(url).then(() => {
-                btn.textContent = 'Copied!';
-                btn.classList.add('copied');
-                setTimeout(() => {
-                    btn.textContent = 'Copy Link';
-                    btn.classList.remove('copied');
-                }, 2000);
-            }).catch(err => {
-                alert('Failed to copy: ' + err);
-            });
+        function openLink(url) {
+            window.open(url, '_blank');
         }
     </script>
 </body>
